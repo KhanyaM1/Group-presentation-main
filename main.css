@@ -1,34 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
+    margin: 10;
     padding: 0;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+/* Header section */
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    margin: 0;
 }
 
-.left-section,
-.middle-section,
-.right-section {
-    display: flex;
+.middle-section {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 80px; 
     align-items: center;
+    margin: auto;
 }
-
+ /* Left section */
 .h1-header {
     color: var(--primary-main-400, #DF491D);
-    font-size: 36px; /* Adjust the font size as needed */
+    font-size: 36px;
     font-style: italic;
     font-weight: 900;
-    margin-right: 10px; /* Adjust the margin as needed */
 }
 
+ /* Middle section */
 .search-form {
-    width: 280px;
+    width: 430px;
     display: flex;
     align-items: center;
 }
@@ -36,13 +43,12 @@ body {
 #search-input {
     width: 100%;
     font-family: 'Poppins';
-    height: 40px; /* Adjust the height as needed */
+    height: 40px;
     border: none;
     border-bottom: 1px solid #121212;
     padding-left: 10px;
-    margin-right: 10px; /* Adjust the margin as needed */
 }
-
+ /* Right section */
 .clear-button {
     background: none;
     border: none;
@@ -55,30 +61,118 @@ body {
     text-decoration: underline;
 }
 
-.primary-large,
-.secondary-large {
+.first-button,
+.second-button{
     background: var(--primary-main-400, #DF491D);
-    border: none;
-    color: white;
-    padding: 15px 20px;  /*Adjust the padding as needed */
-    text-align: center;
-    text-decoration: none;
+    border: 1px solid #DF491D;
+    color:white;
+    padding: 10px 15px;
     font-family: 'Poppins';
-    font-size: 16px;
+    font-size: 15px;
+    width: 120px;
+}
+
+.second-button {
+    background: none;
+    color: #121212;
+}
+
+/* Styles for the loginmodal */
+
+
+.background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: blur(100%);
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+}
+
+.close {
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color:black;
+}
+
+.modal-header {
+    text-align: center;
+    color: var(--primary-main-400, #DF491D);
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.modal h2 {
+    margin: 0;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+}
+.remember-me-checkbox {
     margin-right: 5px; /* Adjust the margin as needed */
 }
 
-.secondary-large {
-    background: none;
-    border: 1px solid #DF491D;
-    color: #121212;
-    margin-left: 5px; /* Adjust the margin as needed */
+.remember-me,
+.forgot-password {
+    font-size: 12;
+    flex: 1; /* Equal flex distribution */
 }
 
+.login-button {
+    background-color: #DF491D;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+    font-size: 15px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Navigation bar */
 
 .nav {
+    display: inline;
     text-align: center;
     padding: 10px;
+    margin-bottom: 20px; 
 }
 
 nav ul {
@@ -96,13 +190,18 @@ nav ul li {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    font-size: 18px; /* Adjust font size as needed */
+    font-size: 18px; 
 }
 
+section {
+    margin-bottom: 40px; /* Adjust the margin between sections as needed */
+}
 
+/* Slideshow section*/
 .half-frame {
     display: flex;
     width: 100%;
+    height: 100%;
 }
 
 .image-half,
@@ -114,7 +213,8 @@ nav ul li {
 
 .image-half img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -145,6 +245,7 @@ nav ul li {
     background-color: #DF491D; /* Set the background color */
     color: #fff; /* Set the text color to white */
     padding: 12px 20px; /* Adjust the padding to make the button slightly longer */
+    font-family: 'Poppins';
     font-size: 16px; /* Adjust the font size if needed */
     border: none;
     cursor: pointer;
@@ -158,9 +259,9 @@ nav ul li {
     background-color: #DF491D; /* Set the background color */
     color: #fff; /* Set the text color to white */
     padding: 12px 20px; /* Adjust the padding to make the button slightly longer */
+    font-family: 'Poppins';
     font-size: 16px; /* Adjust the font size if needed */
     border: none;
-
     cursor: pointer;
 }
 
@@ -174,11 +275,10 @@ nav ul li {
     color: #fff; /* Set the text color to white */
     padding: 12px 20px; /* Adjust the padding to make the button slightly longer */
     font-size: 16px; /* Adjust the font size if needed */
+    font-family: 'Poppins';
     border: none;
-
     cursor: pointer;
 }
-
 .learn-more-button:hover {
     background-color: #BF3C17; /* Change the background color on hover */
 }
@@ -187,33 +287,18 @@ nav ul li {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 10000px;
-  position: relative;
-  margin: auto;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    max-height: auto; /* Set a fixed height for the slideshow container */
 }
 
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
@@ -226,7 +311,6 @@ nav ul li {
     width: 15px; /* Set the width of the square */
     margin: 0 5px; /* Adjust the margin between squares */
     background-color: #ddd; /* Set the background color of the square */
-    border-radius: 4px; /* Add border-radius for rounded corners */
     display: inline-block;
     transition: background-color 0.3s ease; /* Add transition for a smooth effect */
     cursor: pointer;
@@ -250,102 +334,327 @@ nav ul li {
     to {opacity: 1}
 }
 
+/* Event section*/
 h3 {
+    font-size: 25px;
+    font-weight: semibold;
     align-items:flex-start;
     margin-left: 1em;
 }
 
 .event-container {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 5px;
+    flex-direction:row;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
-
 /* Individual event */
-.event {
-    max-width: 300px; /* Set the maximum width for each event */
-    width: 100%; /* Ensure each event takes full width within the container */
-    text-align: center;
-    padding: 10px; /* Add padding for better appearance */
-    position: relative;
-    transition: transform 0.3s ease; /* Add transition for smooth effect */
+div.event{
+    border: 1px solid #ccc;
+    max-width: 500px;
+    width: calc(25% - 10px);
+    transition: transform 0.2s ease;
 }
-
 /* Event image */
-.event img {
+div.event img {
     width: 100%; /* Make the image fill the container width */
     height: auto; /* Maintain aspect ratio */
-    border-radius:5px; /* Optional: Add border-radius for rounded corners */
+    gap: 1px;
 }
 
-.event:hover {
-    transform: scale(1.10); /* Enlarge the event on hover */
+.desc{
+        font-weight: bold;
 }
-
-
-.event-details {
-    padding: 10px;
+.date{
     text-align: center;
-    background-color: #F3F5FF; /* Set the background color for event details */
 }
 
+
+div.event:hover{ 
+    transform: scale(1.05);
+}
+
+.event img {
+    width: 100%;
+    height: auto; 
+}
+
+.desc{
+    padding:15px;
+    text-align: center;
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+/* Featured Section */
 .featured-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
-    justify-content: space-around;
-    max-width: 1200px; /* Set a maximum width for the container */
-    margin: 0 auto; /* Center the container on the page */
+    overflow-x: auto;
+    justify-content:space-around;
 }
 
 /* Individual featured item */
 .featured {
-    width: calc(33.33% - 20px); /* Set the width for each featured item (3 items per row) */
+    width: calc(30% - 10px); /* Set the width for each featured item (3 items per row) */
     text-align: center;
-    padding: 10px; /* Add padding for better appearance */
+    padding: 2px; 
     transition: box-shadow 0.3s ease; /* Add transition for a smooth effect */
     position: relative;
 }
 
 /* Featured item image */
 .featured img {
-    width: 100%; /* Make the image fill the container width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Ensure the image doesn't exceed its container */
-    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+    width: 100%; 
+    height: auto; 
+    border-radius:8px; 
+    gap: 2px;;
+}
+.purchase-button{
+    background-color: #DF491D; 
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    width: 100px;
 }
 
-section {
-    margin-bottom: 50px; /* Adjust the margin between sections as needed */
-}
-
+/* Contemporary Art section */
 .rectangular-frame{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1084.8px;
-    margin: 20px auto;
+    padding: 40px 0;
 }
 
 .text-half{
-    flex: 0 0 43%;
-    overflow: hidden;
-    border-radius: 8px;
+    max-width: 50%;
+    text-align: center;
 }
 
 .text-half h1 {
-    font-size: 35px; /* Adjust the font size as needed */
-    line-height: 1.5; /* Adjust the line height as needed */
+    font-size: 30px; 
+    line-height: 1.5; 
 }
 .image-side {
-    flex: 0 0 65%; /* Adjust the width of the image half */
+    flex: 0 0 65%; 
     overflow: hidden;
-    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+    border-radius: 8px; 
 }
 
 .image-side img {
-    width: 100%; /* Adjust the width as needed for the desired size */
+    width: 100%; 
     height: auto;
+}
+
+.slideshow-container {
+    position: relative;
+    text-align: center;
+    overflow:hidden;
+}
+
+button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    width: 160px; 
+    height: 50px;
+    font-size: 16px;
+    border: none;
+}
+
+/* Past Artist Section*/
+.artists-container{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    gap: 20px;
+    justify-content:space-around;
+}
+
+.past-artists{
+    width: calc(30% - 10px);
+    text-align: center;
+    padding: 10px; 
+    transition: box-shadow 0.3s ease;
+    position: relative;
+}
+
+.past-artists img{
+    width: 100%; 
+    height: auto; 
+    border-radius:5px; 
+    gap: 2px;
+
+}
+
+/* Virtual Galleries*/
+
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.gallery {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 8px;
+    right: 16;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+}
+
+section:last-child {
+    height: 80vh;
+}
+/* Footer*/
+
+section:last-child {
+    margin-bottom: 30px;
+}
+footer{
+    background-color:white;
+}
+
+.bottom-page {
+    display: flex;
+    justify-content: space-between;   
+}
+
+.left-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form styling (you can adjust as needed) */
+.signup-form {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 8px;
+    border: 1px solid #DF491D;
+    margin-right: 10px;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+}
+.signup-button{
+    background-color: white;
+    color: black;
+    padding: 5px 8px;
+    border: 1px solid #DF491D;
+    cursor: pointer;
+    width:80%
+}
+
+.right-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.right-footer,
+.left-footer{
+    flex: 1;
+}
+
+.footer-section{
+    margin-right: 20px;
+}
+.footer-section a{
+    text-decoration: none;
+    color:#333;
+    font-size: 10px;
+}
+
+
+
+.footer-section h4 {
+    margin-bottom: 8px;
+    font-size: 12px; /* Adjust the font size for headings */
+}
+.footerContainer{
+    width:100%;
+    padding: 70px 30px 20px;
+}
+
+.socialmediaIcons{
+    display:flex;
+}
+
+.socialmediaIcons a{
+    text-decoration: none;
+    padding:10px;
+    color: black;
+    margin:10px;
+    border-radius: 50%;
+}
+
+.socialmediaIcons a{
+    font-size: 2em;
+    color: black;
+
+}
+
+
+/* PURCHASE IMAGE PAGE*/
+/* Next & previous buttons */
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position:absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+   
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+.buttons-containers {
+    text-align: center;
+    margin-top: 10px;
 }
