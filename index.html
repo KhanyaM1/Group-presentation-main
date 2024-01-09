@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="main.css"> 
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="left-section">
+                <h1 class="h1-header">APRICOTS</h1>
+            </div>
+            <div class="middle-section">
+                <form class="search-form">
+                    <input type="search" id="search-input" placeholder="&#128269; Search by artist, theme, style etc.        &#10006;">
+                    <button type="button" class="clear-button" id="clear-search"></button> 
+                </form>
+            </div>
+            <div class="right-section">
+                <button class="primary-large">Get started</button>
+                <button class="secondary-large">Login</button>
+            </div>
+        </div>
+    </header> 
+    <nav>
+        <div class="nav">
+            <ul>
+                <li>Artists</li>
+                <li>Themes</li>
+                <li>Style</li>
+                <li>Events</li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section style="padding-top: 40px;">
+        <div class="slideshow-container">
+            <div class="mySlides fade" style="display:block;">
+                <div class="half-frame">
+                    <div class="image-half">
+                        <img src="./images/slideshow1.png" alt="Description of the image 1">
+                    </div>
+                    <div class="description-half">
+                        <h2 class="discover-header">Discover art from <br/> across the globe </h2>
+                        <p class="description-text">Lorem ipsum dolor sit amet. <br/> Ut rerum dolor quit internos <br/> nesciunt. </p>
+                        <button class="explore-button" onclick="window.location.href='explore-page.html'">Explore</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mySlides fade" style="display:none">
+                <div class="half-frame">
+                    <div class="description-half">
+                        <h2 class="discover-header">The Ethereal <br/> Collection 2022 </h2>
+                        <p class="description-text">Lorem ipsum dolor sit amet. <br/> Ut rerum dolor quit internos <br/> nesciunt. </p>
+                        <button class="browse-works-button" onclick="window.location.href='browse-works-page.html'">Browse Works</button>
+                    </div>
+                    <div class="image-half">
+                        <img src="./images/slideshow2.png" alt="Description of the image 2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mySlides fade" style="display:none">
+                <div class="half-frame">
+                    <div class="image-half">
+                        <img src="./images/slideshow3.png" alt="Description of the image 1">
+                    </div>
+                    <div class="description-half">
+                        <h2 class="discover-header">Conduct a virtual <br/> auction </h2>
+                        <p class="description-text">Lorem ipsum dolor sit amet. <br/> Ut rerum dolor quit internos <br/> nesciunt. </p>
+                        <button class="learn-more-button" onclick="window.location.href='learn-more-page.html'">Learn More</button>
+                </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div style="text-align:center">
+            <span class="dot active-dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <section>
+        <h3>Upcoming Events</h3>
+        <div class="event-container">
+            <div class="event">
+                <img src="./images/event1.png" alt="Event 1">
+                <h4>Hosa Gardens Live Virtual <br/> Auction</h4>
+                <p>January 15, 2024</p>
+            </div>
+            <div class="event">
+                <img src="./images/event2.png" alt="Event 2">
+                <h4>Mundane Lives Exhibition by <br/> Palesa </h4>
+                <p>February 20, 2024</p>
+            </div>
+            <div class="event">
+                <img src="./images/event3.png" alt="Event 3">
+                <h4>Mundane Lives Exhibition by <br/> Palesa</h4>
+                <p>March 10, 2024</p>
+            </div>
+            <div class="event">
+                <img src="./images/event4.png" alt="Event 3">
+                <h4>Hosa Gardens Live Virtual <br/> Auction</h4>
+                <p>March 10, 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Featured</h3>
+        <div class="featured-container">
+            <div class="featured">
+                <img src="./images/featured1.png" alt="people going about with their lives">
+                <h4 class="author-name">Stanley Sibanda</h4>
+                <p class="featured-title">Life Goes On, 2021</p>
+                <p class="featured-price">£950.00</p>
+            </div>
+            <div class="featured">
+                <img src="./images/featured2.png" alt="Family portait">
+                <h4 class="author-name">Kudzanai-Violet</h4>
+                <p class="featured-title">Family Portrait, 2017</p>
+                <p class="featured-price">£1200.00</p>
+            </div>
+            <div class="featured">
+                <img src="./images/featured3.png" alt="Michelangelo (Palace of Versailles Mural)">
+                <h4 class="author-name">Michelangelo</h4>
+                <p class="featured-title">Palace of Versailles Mural</p>
+                <p class="featured-price">£2580.00</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="rectangular-frame">
+        <div class="text-half">
+            <h1>SHOP <br/> CONTEMPORARY <br/> EAST AFRICAN ART</h1>
+        </div>
+        <div class="image-side">
+            <img src="./images/Contemporary art.png" alt="Three african contemporary arts">
+        </div>
+
+    </section>
+
+
+
+
+</body>
+</html>
