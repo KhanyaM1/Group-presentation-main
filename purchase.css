@@ -122,6 +122,10 @@ body {
     margin-top: 15px;
 }
 
+.continue:hover {
+    background-color: #BF3C17; /* Change the background color on hover */
+}
+
 .bottom-confirmation {
     display: flex;
     justify-content: centre;
@@ -144,6 +148,10 @@ body {
     text-decoration: none;
     font-size: 16px;
     height: 40px;
+}
+
+.back-button:hover {
+    background-color: rgb(232, 229, 229); /* Change the background color on hover */
 }
 
 /*   w3schools' code   */
