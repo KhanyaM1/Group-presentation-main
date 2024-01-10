@@ -1,4 +1,4 @@
-
+// Search bar
 document.addEventListener('DOMContentLoaded', function () {
     // Wait for the DOM to be fully loaded before adding event listeners
 
@@ -11,11 +11,24 @@ document.addEventListener('DOMContentLoaded', function () {
         // Clear the search input value
         searchInput.value = '';
 
-        // Optionally, you can set focus back to the search input after clearing
+     
         searchInput.focus();
     });
 });
 
+// Login Modal
+function openLoginModal() {
+    document.getElementById("loginModal").style.display = "block";
+    document.body.style.background = "rgba(0, 0, 0, 0.5)";
+}
+
+// Function to close the login modal
+function closeLoginModal() {
+    document.getElementById("loginModal").style.display = "none";
+    document.body.style.background = "none";
+}
+
+// Slideshow section
 var slideIndex = 1;
 showSlides(slideIndex);
 
