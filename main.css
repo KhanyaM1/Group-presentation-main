@@ -297,11 +297,6 @@ section {
     object-fit: cover;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: #DF491D(0,0,0,0.8);
-  }
-
   /* The dots/bullets/indicators */
   .dot {
     height: 15px; /* Set the height of the square */
@@ -347,7 +342,7 @@ h3 {
 }
 /* Individual event */
 div.event{
-    border: 1px solid #ccc;
+    border: 1px solid #CCC;
     max-width: 500px;
     width: calc(25% - 10px);
     transition: transform 0.2s ease;
@@ -525,6 +520,7 @@ footer{
     background-color:white;
 }
 
+/* Footer Section*/
 .bottom-page {
     display: flex;
     justify-content: space-between;   
@@ -533,6 +529,7 @@ footer{
 .left-footer {
     display: flex;
     flex-direction: column;
+    align-items: first baseline;
 }
 
 /* Form styling (you can adjust as needed) */
@@ -570,8 +567,12 @@ footer{
     padding: 5px 8px;
     border: 1px solid #DF491D;
     cursor: pointer;
-    width:80%
+    width: 69%; /* Set the desired fixed width */
+    max-width: 69%;
+    box-sizing: border-box;
+
 }
+
 
 .right-footer {
     display: flex;
@@ -591,7 +592,6 @@ footer{
     color:#333;
     font-size: 10px;
 }
-
 
 
 .footer-section h4 {
@@ -620,4 +620,167 @@ footer{
     color: black;
 
 }
+
+
+/* PURCHASE IMAGE PAGE*/
+
+/* Button to go back to the explore page*/
+
+.back-button {
+    display:inline;
+    background-color: white;
+    color: #050504;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+
+/* Styling for the previous and next buttons */
+.prev, .next {
+    position:absolute;
+    width: auto;
+    font-size: 20px;
+    color: black;
+    padding: 6px;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 0px;
+}
+
+.next {
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+}
+
+
+
+/* Centering the buttons vertically in the slideshow container */
+.slideshow-container .prev,
+.slideshow-container .next {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Centering the buttons horizontally in the slideshow container */
+.slideshow-container .prev {
+    left: 20%;
+}
+
+.slideshow-container .next {
+    right: 20%;
+}
+
+/* Centering button containers*/
+.buttons-containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the buttons */
+.buttons-containers button {
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: white;
+    color: #050504;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.buttons-containers button:hover {
+    background-color: #DF491D;
+}
+
+/* Center the content container */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'poppins';
+    margin-top: 20px; /* Add margin for spacing between buttons and content */
+}
+
+.purchase-art {
+    margin-top: 10px; /* Add margin at the top of the purchase button */
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'poppins';
+    background-color: #DF491D;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+    width: 470px; /* Adjust the width of the purchase button */
+}
+
+.purchase-art:hover {
+    background-color: #DF491D;
+}
+
+/* Styling for the content */
+.author-name,
+.featured-title,
+.featured-price,
+.purchase-button {
+    margin: 5px;
+}
+
+.featured-price{
+    font-size: 20px;
+    font-weight: bold;
+}
+.separator-line {
+    width: 40%; /* Adjust the width of the line */
+    margin: 5px auto; /* Adjust the margin for spacing */
+    border: none;
+    border-top: 1px solid #CCCCCC;
+}
+
+.make-offer{
+    margin-top: 10px; /* Add margin at the top of the purchase button */
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid #DF491D ;
+    transition: background-color 0.3s ease;
+    width: 470px;
+    font-weight: bold;
+}
+
+.art-information {
+    text-align:justify;
+    font-family: 'poppins';
+    margin-top: 50px; /* Adjust the margin to move down two rows */
+}
+
+.art-information h4 {
+
+    margin: 10px 0; /* Adjust the margin as needed for spacing */
+}
+
+.other-purchases{
+    margin: 5px auto; /* Adjust the margin for spacing */
+    border: none;
+    border-top: 2 px solid #050504;
+}
+
 
